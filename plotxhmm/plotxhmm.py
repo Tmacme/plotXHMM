@@ -6,6 +6,21 @@ class Parser:
     def __init__(self, normalized_zscores_file):
         self._df = pd.read_csv(normalized_zscores_file, sep='\t', index_col='Matrix')
 
+    def subset(self, interval):
+
+        selected_columns = []
+
+        for column in self._df.columns:
+
+            chromosome = column.split(':')[0]
+            start = int(column.split(':')[1].split('-')[0])
+            end = int(column.split(':')[1].split('-')[1])
+
+            if interval.overlaps(Interval(chromosome, start, end)):
+                selected_columns.append(column)
+
+        return self._df[selected_columns]
+
 
 class Interval:
     ''' Reperesents an interval (1-based, end inclusive) from an IntervalList. '''
