@@ -8,6 +8,7 @@ class Parser:
 
 
 class Interval:
+    ''' Reperesents an interval (1-based, end inclusive) from an IntervalList. '''
 
     def __init__(self, chromosome, start, end):
 
