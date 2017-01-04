@@ -16,6 +16,19 @@ class Interval:
         self._start = start
         self._end = end
 
+    def overlaps(self, other_interval):
+
+        if not self.chromosome == other_interval.chromosome:
+            return False
+
+        if self.start <= other_interval.start and other_interval.start <= self.end:
+            return True
+
+        if self.start <= other_interval.end and other_interval.end <= self.end:
+            return True
+
+        return False
+
     @property
     def chromosome(self):
         return self._chromosome
