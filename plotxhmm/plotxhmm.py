@@ -15,3 +15,15 @@ class Interval:
         self._chromosome = chromosome
         self._start = start
         self._end = end
+
+    @property
+    def chromosome(self):
+        return self._chromosome
+
+    @property
+    def start(self):
+        return self._start
+
+    @property
+    def end(self):
+        return self._end

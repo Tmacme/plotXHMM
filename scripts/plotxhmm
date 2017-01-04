@@ -10,3 +10,5 @@ print(parser._df.shape)
 print(parser._df.index)
 
 interval = Interval('22', 1000, 2000)
+
+print(interval.chromosome)
