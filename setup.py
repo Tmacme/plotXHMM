@@ -9,6 +9,8 @@ setup(
 
     packages=['plotxhmm'],
 
+    scripts=['scripts/plotxhmm'],
+
     install_requires=['pandas']
 
 )
