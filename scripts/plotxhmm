@@ -4,11 +4,12 @@ from plotxhmm.plotxhmm import Parser, Interval
 
 print('Hello, World!')
 
-parser = Parser('tests/test_normalized_zscores.txt')
+parser = Parser('tests/normalized_zscores.txt')
 
 print(parser._df.shape)
 print(parser._df.index)
 
-interval = Interval('22', 1000, 2000)
+interval_a = Interval('22', 1000, 2000)
+interval_b = Interval('22', 2001, 2500)
 
-print(interval.chromosome)
+print(interval_a.overlaps(interval_b))
