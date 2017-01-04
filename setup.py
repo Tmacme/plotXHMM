@@ -11,6 +11,8 @@ setup(
 
     scripts=['scripts/plotxhmm'],
 
-    install_requires=['pandas']
+    install_requires=['pandas'],
+
+    test_suite='tests'
 
 )
