@@ -6,10 +6,4 @@ print('Hello, World!')
 
 parser = Parser('tests/normalized_zscores.txt')
 
-print(parser._df.shape)
-print(parser._df.index)
-
-interval_a = Interval('22', 1000, 2000)
-interval_b = Interval('22', 2001, 2500)
-
-print(interval_a.overlaps(interval_b))
+print(parser.subset(Interval('22', 16400000, 17000000)))
