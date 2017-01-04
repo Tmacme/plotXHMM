@@ -2,8 +2,6 @@
 
 from plotxhmm.plotxhmm import Parser, Interval
 
-print('Hello, World!')
-
 parser = Parser('tests/normalized_zscores.txt')
 
-print(parser.subset(Interval('22', 16400000, 17000000)))
+subset = parser._zscores_subset(Interval('22', 16400000, 17000000))

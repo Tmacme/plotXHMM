@@ -7,7 +7,7 @@ class Parser:
         self._df = pd.read_csv(normalized_zscores_file, sep='\t', index_col='Matrix')
         self._df.index.names = ['SAMPLE']
 
-    def subset(self, interval):
+    def _zscores_subset(self, interval):
 
         selected_columns = []
 
