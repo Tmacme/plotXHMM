@@ -7,6 +7,8 @@ setup(
     author='Michael Knudsen',
     author_email='micknudsen@gmail.com',
 
-    packages=['plotxhmm']
+    packages=['plotxhmm'],
+
+    install_requires=['pandas']
 
 )
