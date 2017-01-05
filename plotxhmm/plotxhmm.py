@@ -38,6 +38,9 @@ class Parser:
         df.columns = x_ticks
 
         plt.figure()
+        
+        _, ax = plt.subplots()
+        ax.ticklabel_format(style='plain')
 
         plt.ylabel('Normalized Z-score')
 
