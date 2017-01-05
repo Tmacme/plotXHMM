@@ -11,7 +11,7 @@ setup(
 
     scripts=['scripts/plotxhmm'],
 
-    install_requires=['pandas', 'seaborn'],
+    install_requires=['pandas', 'matplotlib'],
 
     test_suite='tests'
 
