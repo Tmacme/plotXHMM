@@ -80,15 +80,19 @@ class Interval:
 
     def overlaps(self, other_interval):
 
+        # Intervals are on different chromosomes
         if not self.chromosome == other_interval.chromosome:
             return False
 
+        # The start of other_interval is within this interval
         if self.start <= other_interval.start and other_interval.start <= self.end:
             return True
 
+        # The end of other_interval is within this interval
         if self.start <= other_interval.end and other_interval.end <= self.end:
             return True
 
+        # Intervals are on same chromosome but do not overlap
         return False
 
     @property
