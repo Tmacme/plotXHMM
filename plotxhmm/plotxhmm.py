@@ -14,6 +14,8 @@ class Parser:
 
         selected_columns = []
 
+        target_midpoints = []
+
         for column in self._df.columns:
 
             chromosome = column.split(':')[0]
@@ -22,21 +24,17 @@ class Parser:
 
             if interval.overlaps(Interval(chromosome, start, end)):
                 selected_columns.append(column)
+                target_midpoints.append(int(start + (end - start) / 2))
 
-        return self._df[selected_columns]
+        subset_df = self._df[selected_columns]
+        subset_df.columns = target_midpoints
+
+        return subset_df
 
     def plot_interval(self, interval, sample, pdf_file):
 
         df = self._zscores_subset(interval)
-
-        x_ticks = []
-        for column in df.columns:
-            start = int(column.split(':')[1].split('-')[0])
-            end = int(column.split(':')[1].split('-')[1])
-            x_ticks.append(int(start + (end - start) / 2))
-
-        df.columns = x_ticks
-
+        
         plt.figure()
 
         _, ax = plt.subplots()
