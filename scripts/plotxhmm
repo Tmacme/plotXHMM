@@ -4,4 +4,6 @@ from plotxhmm.plotxhmm import Parser, Interval
 
 parser = Parser('tests/normalized_zscores.txt')
 
-subset = parser._zscores_subset(Interval('22', 16400000, 17000000))
+interval = Interval('22', 18000000, 19000000)
+subset = parser._zscores_subset(interval)
+parser.plot_interval(interval, 'HG00113')

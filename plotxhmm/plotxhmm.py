@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 
 class Parser:
 
@@ -21,6 +21,15 @@ class Parser:
                 selected_columns.append(column)
 
         return self._df[selected_columns]
+
+    def plot_interval(self, interval, sample):
+
+        df = self._zscores_subset(interval)
+
+        for sample, row in df.iterrows():
+            row.plot(linewidth=0.25, color='black')
+            
+        plt.show()
 
 
 class Interval:
