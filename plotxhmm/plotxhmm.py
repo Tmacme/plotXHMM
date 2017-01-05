@@ -22,14 +22,21 @@ class Parser:
 
         return self._df[selected_columns]
 
-    def plot_interval(self, interval, sample):
+    def plot_interval(self, interval, sample, pdf_file):
 
         df = self._zscores_subset(interval)
 
-        for sample, row in df.iterrows():
-            row.plot(linewidth=0.25, color='black')
-            
-        plt.show()
+        plt.figure()
+
+        for this_sample, row in df.iterrows():
+
+            if this_sample == sample:
+                row.plot(linewidth=1.0, color='red', marker='.')
+
+            else:
+                row.plot(linewidth=0.25, color='black')
+
+        plt.savefig(pdf_file)
 
 
 class Interval:
