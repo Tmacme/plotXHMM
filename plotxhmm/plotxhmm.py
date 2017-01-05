@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 matplotlib.style.use('ggplot')
 
+
 class Parser:
     ''' Must be initialized with an XHMM output file containing normalized
         read depth Z-scores. Following the XHMM tutorial, such files are
