@@ -34,11 +34,11 @@ class Parser:
     def plot_interval(self, interval, sample, pdf_file):
 
         df = self._zscores_subset(interval)
-        
-        plt.figure()
 
-        _, ax = plt.subplots()
-        ax.ticklabel_format(style='plain')
+        fig = plt.figure()
+
+        ax = fig.add_subplot(111)
+        ax.ticklabel_format(useOffset=False, style='plain')
 
         plt.ylabel('Normalized Read Depth Z-Score')
 
@@ -51,7 +51,9 @@ class Parser:
                 row.plot(linewidth=0.25, color='black')
 
         plt.title(sample)
+
         plt.savefig(pdf_file)
+
 
 
 class Interval:
