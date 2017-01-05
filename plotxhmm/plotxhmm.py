@@ -38,11 +38,13 @@ class Parser:
         df.columns = x_ticks
 
         plt.figure()
-        
+
+
+
         _, ax = plt.subplots()
         ax.ticklabel_format(style='plain')
 
-        plt.ylabel('Normalized Z-score')
+        plt.ylabel('Normalized Read Depth Z-Score')
 
         for this_sample, row in df.iterrows():
 
@@ -52,6 +54,7 @@ class Parser:
             else:
                 row.plot(linewidth=0.25, color='black')
 
+        plt.title(sample)
         plt.savefig(pdf_file)
 
 
