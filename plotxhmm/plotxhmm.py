@@ -39,8 +39,6 @@ class Parser:
 
         plt.figure()
 
-
-
         _, ax = plt.subplots()
         ax.ticklabel_format(style='plain')
 
