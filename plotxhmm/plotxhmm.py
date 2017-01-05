@@ -28,6 +28,8 @@ class Parser:
 
         plt.figure()
 
+        plt.ylabel('Normalized Z-score')
+
         for this_sample, row in df.iterrows():
 
             if this_sample == sample:
