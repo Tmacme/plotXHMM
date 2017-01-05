@@ -1,5 +1,8 @@
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
+
+matplotlib.style.use('ggplot')
 
 class Parser:
 
@@ -26,6 +29,14 @@ class Parser:
 
         df = self._zscores_subset(interval)
 
+        x_ticks = []
+        for column in df.columns:
+            start = int(column.split(':')[1].split('-')[0])
+            end = int(column.split(':')[1].split('-')[1])
+            x_ticks.append(int(start + (end - start) / 2))
+
+        df.columns = x_ticks
+
         plt.figure()
 
         plt.ylabel('Normalized Z-score')
@@ -33,7 +44,7 @@ class Parser:
         for this_sample, row in df.iterrows():
 
             if this_sample == sample:
-                row.plot(linewidth=1.0, color='red', marker='.')
+                row.plot(linewidth=3.0, color='red')
 
             else:
                 row.plot(linewidth=0.25, color='black')
