@@ -64,7 +64,7 @@ class Parser:
                 row.plot(linewidth=0.25, color='black')
 
         plt.title(sample)
-        plt.xlabel(f'Position (Chromosome {interval.chromosome})') # pylint:disable=syntax-error
+        plt.xlabel('Position (Chromosome {chromosome})'.format(chromosome=interval.chromosome))
         plt.ylabel('Normalized Read Depth Z-Score')
 
         plt.savefig(pdf_file)
