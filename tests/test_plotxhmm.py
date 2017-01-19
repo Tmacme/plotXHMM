@@ -1,5 +1,5 @@
 import unittest
-from plotxhmm.plotxhmm import Interval
+from plotxhmm.plotxhmm import Interval, Parser
 
 class TestPlotXHMM(unittest.TestCase):
 
@@ -15,3 +15,7 @@ class TestPlotXHMM(unittest.TestCase):
         self.assertTrue(Interval('chr1', 1000, 2000).overlaps(Interval('chr1', 1500, 2500)))
         self.assertTrue(Interval('chr1', 1000, 2000).overlaps(Interval('chr1', 500, 1000)))
         self.assertTrue(Interval('chr1', 1000, 2000).overlaps(Interval('chr1', 2000, 2500)))
+
+    def test_parser(self):
+
+        parser = Parser('tests/normalized_zscores.txt')
