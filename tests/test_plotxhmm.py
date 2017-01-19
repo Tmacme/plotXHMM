@@ -19,3 +19,9 @@ class TestPlotXHMM(unittest.TestCase):
     def test_parser(self):
 
         parser = Parser('tests/normalized_zscores.txt')
+
+        deletion_interval = Interval('22', 18898402, 18913235)
+        duplication_interval = Interval('22', 17071768, 17073440)
+
+        parser.plot_interval(interval=deletion_interval, sample='HG00121', pdf_file='tests/deletion.pdf')
+        parser.plot_interval(interval=duplication_interval, sample='HG00113', pdf_file='tests/duplication.pdf')
