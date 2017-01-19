@@ -89,3 +89,7 @@ ENV/
 .ropeproject
 
 debug
+
+tests/duplication.pdf
+tests/deletion.pdf
+
