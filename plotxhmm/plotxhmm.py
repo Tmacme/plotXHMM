@@ -65,8 +65,8 @@ class Parser:
                 row.plot(linewidth=0.25, color='black')
 
         plt.title(sample)
-        plt.xlabel('Position (Chromosome {chromosome})'.format(chromosome=interval.chromosome))
-        plt.ylabel('Normalized Read Depth Z-Score')
+        plt.xlabel('Position (Chromosome {chromosome})'.format(chromosome=interval.chromosome), fontsize='small')
+        plt.ylabel('Normalized Read Depth Z-Score', fontsize='small')
 
         plt.savefig(pdf_file)
 
