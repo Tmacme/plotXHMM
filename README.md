@@ -15,4 +15,6 @@ $ pip install git+https://github.com/micknudsen/plotXHMM.git
 
 # Running plotXHMM
 
-Among the output files from XHMM is a file containing normalized read depth Z-scores (for a simple example, see [this](tests/normalized_zscores.txt)).
+Among the output files from XHMM is a file containing normalized read depth Z-scores ([example](tests/normalized_zscores.txt)).
+
+
