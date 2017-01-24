@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib
-matplotlib.use('TkAgg')
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 matplotlib.style.use('ggplot')
