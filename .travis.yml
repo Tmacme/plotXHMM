@@ -5,7 +5,7 @@ install:
   - pip install -r requirements.txt
   - pip install codacy-coverage
 script:
-  - coverage run --source=plotxhmm setup.py test
+  - python setup.py test
 after_success:
   - coverage xml
   - python-codacy-coverage -r coverage.xml
