@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/10c26aa97fa14fc486f18865d4a6189f)](https://www.codacy.com/app/micknudsen/plotXHMM?utm_source=github.com&utm_medium=referral&utm_content=micknudsen/plotXHMM&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/micknudsen/plotXHMM.svg?branch=master)](https://travis-ci.org/micknudsen/plotXHMM)
 
 # plotXHMM
