@@ -68,6 +68,9 @@ class Parser:
         plt.xlabel('Position (Chromosome {chromosome})'.format(chromosome=interval.chromosome), fontsize='small')
         plt.ylabel('Normalized Read Depth Z-Score', fontsize='small')
 
+        for tick in ax.xaxis.get_major_ticks():
+            tick.label.set_rotation(45)
+
         plt.savefig(pdf_file)
 
 
