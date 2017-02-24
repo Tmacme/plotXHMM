@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 
 matplotlib.style.use('ggplot')
 
-
 class Parser:
     ''' Must be initialized with an XHMM output file containing normalized
         read depth Z-scores. Following the XHMM tutorial, such files are
@@ -69,7 +68,9 @@ class Parser:
         plt.ylabel('Normalized Read Depth Z-Score', fontsize='small')
 
         for tick in ax.xaxis.get_major_ticks():
-            tick.label.set_rotation(45)
+            tick.label.set_rotation(30)
+
+        plt.tight_layout()
 
         plt.savefig(pdf_file)
 
