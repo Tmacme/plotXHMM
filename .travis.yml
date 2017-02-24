@@ -3,8 +3,9 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
-  - pip install coveralls
+  - pip install codacy-coverage
 script:
   - coverage run --source=plotxhmm setup.py test
 after_success:
-  - coveralls
+  - coverage xml
+  - python-codacy-coverage -r coverage.xml
